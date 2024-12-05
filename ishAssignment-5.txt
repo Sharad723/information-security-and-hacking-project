@@ -1,0 +1,19 @@
+Title: Automated System Shutdown Script
+
+Objective: The objective of this project is to create a simple, user triggered batch script that automates the shutdown process of a computer.
+            The script is designed to instantly shutdown the system as soon as the batch file is executed providing minimal notice to the user before forcefully terminating 
+all running applications and shutting down the system.
+
+This can be useful in specific scenarios where an immediate shutdown is necessary or for demonstration purpose.
+
+Project Code:
+
+@echo off
+echo ===============================
+echo System Shutdown
+echo ===============================
+echo Your computer will shutdown in 1 second...
+timeout /t 1 /nobreak >nul
+echo Shutting down the computer now...
+shutdown /s /f /t 0
+exit
